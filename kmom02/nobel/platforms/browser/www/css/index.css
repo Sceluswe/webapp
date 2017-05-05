@@ -1,0 +1,83 @@
+hmtl, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, img {
+    font-family: arial;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+h4 {
+    color: #292517;
+}
+
+/* ----------------------------------------
+* -------- Navbar
+*/
+navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 6px;
+    background-color: #21997D;
+    border-bottom: 3px solid #C42A00;
+}
+
+navbar li {
+    display: inline;
+    padding-bottom: 3px;
+    /*border-bottom: 3px solid #83c44a;*/
+}
+
+navbar li:hover {
+    border-bottom:  3px solid #292517;
+}
+
+navbar li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+navbar li h2 {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ----------------------------------------
+* -------- Classes
+*/
+/*.title {
+    text-align: center;
+}
+
+.main {
+    text-align: center;
+}*/
+
+.bold {
+    font-weight: bold;
+}
+
+.endparagraf {
+    margin-bottom: 48px;
+}
+
+.profile {
+    width: 136px;
+    height: 240px;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-image: url(../img/profile.jpg);
+}
+
+.logo {
+    width: 170px;
+    height: 200px;
+    margin-left: 24px;
+    margin-right: 24px;
+    background-image: url(../img/logo.png);
+}
