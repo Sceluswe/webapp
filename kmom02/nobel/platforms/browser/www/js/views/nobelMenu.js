@@ -17,7 +17,7 @@ module.exports = {
                 }))
 
             ]),
-            //m("section.container", vnode.children)
+            m("section.container", vnode.children)
         ]);
     }
 };
