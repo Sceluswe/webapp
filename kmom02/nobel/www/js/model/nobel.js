@@ -35,7 +35,7 @@ var Nobel = {
             url : "http://api.nobelprize.org/v1/prize.json?year=" + year
         })
         .then(function (result) {
-            // Reset.
+            // Reset to avoid filling the array with duplicated content.
             Nobel.current.categories = [];
 
             // Save the current year.

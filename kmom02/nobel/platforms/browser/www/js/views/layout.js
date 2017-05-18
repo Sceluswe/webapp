@@ -10,7 +10,10 @@ module.exports = {
                     m("ul", [
                         m("li", [
                             m("img", {src: "../img/nobel-logo.png", width: "64px", height: "64px"})
-                        ])
+                        ]),
+                        m("li.home", [
+                            m("a", { href: "/", oncreate: m.route.link }, "Home")
+                        ]),
                     ])
                 ])
             ]),
