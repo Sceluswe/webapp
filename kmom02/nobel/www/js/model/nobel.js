@@ -22,8 +22,6 @@ var Nobel = {
             });
 
             Nobel.list = years;
-            console.log("Nobel list of years:");
-            console.log(Nobel.list);
         });
     },
 
@@ -37,20 +35,24 @@ var Nobel = {
             url : "http://api.nobelprize.org/v1/prize.json?year=" + year
         })
         .then(function (result) {
+            // Reset.
+            Nobel.current.categories = [];
+
             // Save the current year.
             Nobel.current.year = result.prizes[0].year;
 
             result.prizes.forEach(function (prize) {
+                var categoryName = prize.category.charAt(0).toUpperCase() + prize.category.slice(1);
                 // Create a category object.
                 var category = {
-                    name: prize.category,
+                    name: categoryName,
                     winnerNames: [],
                     winnerMotivations: []
                 };
 
                 // Put all the winners and the motivation for each winner in obj.
                 prize.laureates.forEach( function (currentLau) {
-                    category.winnerNames.push(currentLau.firstname);
+                    category.winnerNames.push(currentLau.firstname + " " + currentLau.surname);
                     category.winnerMotivations.push(currentLau.motivation);
                 });
 

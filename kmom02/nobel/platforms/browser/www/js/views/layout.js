@@ -9,7 +9,7 @@ module.exports = {
                 m("div.container", [
                     m("ul", [
                         m("li", [
-                            m("h2", "Nobel")
+                            m("img", {src: "../img/nobel-logo.png", width: "64px", height: "64px"})
                         ])
                     ])
                 ])

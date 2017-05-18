@@ -6,37 +6,51 @@ var Nobel = require("../model/nobel");
 
 module.exports = {
     oninit: function (vnode) {
+        console.log("Year we're trying to get the info of: " + vnode.attrs.year);
         Nobel.load(vnode.attrs.year);
     },
 
     view: function () {
-        console.log("prizes:" + typeof Nobel.current.prizes);
-        // Loop through all categories.
-        //Nobel.current.prizes.forEach(function (item, index, array) {
-            // Get laureates for this category.
-            //var currentLaureates = [];
-            /*item.laureates.forEach(function (laureate) {
-                currentLaureates.push(m("div", [
-                    m("h2", laureate.firstname + laureate.lastname),
-                    //m("p", laureate.motivation)
-                ]));
-            });*/
+        var thename = "";
+        var themotivation = "";
+        var thecategory = "";
 
-            // Put laureate vnodes into this category.
-            /*var content = m("div", [
-                m("h1", item.category),
-                m("div", currentLaureates)
-            ])*/
-        //});
+        // The object solution.
+        Nobel.current.categories.forEach(function (category) {
+            thecategory = category.name;
+            thename = category.winnerNames[0];
+            themotivation = category.winnerMotivations[0];
+        });
 
+        console.log(thename);
+        console.log(themotivation);
 
+        // The array with all HTML elements.
+        var arr_vnodes = [];
+
+        // The object solution.
+        Nobel.current.categories.forEach(function (category) {
+            // Vnode category name.
+            arr_vnodes.push(m("h2", category.name));
+
+            // Get lenght of the arrays.
+            var len = category.winnerNames.length;
+
+            for (var i = 0; i < len; i++) {
+                if (i === len -1) {
+                    arr_vnodes.push(m("h3", category.winnerNames[i]));
+                    arr_vnodes.push(m("p.lastp", category.winnerMotivations[i]));
+                }
+                else {
+                    arr_vnodes.push(m("h3", category.winnerNames[i]));
+                    arr_vnodes.push(m("p", category.winnerMotivations[i]));
+                }
+            }
+        });
 
         return m("div", [
-            m("h1", Nobel.current.year),
-            m("p", Nobel.current.prizes[0].category),
-            //m("h2", Nobel.categories[0]),
-            //m("p", Nobel.lauretes[0][0].name),
-            //m("p", Nobel.lauretes[0][0].motivation),
+            m("h1", "Nobel winners of " + Nobel.current.year),
+            m("div", arr_vnodes)
         ]);
     }
 };
