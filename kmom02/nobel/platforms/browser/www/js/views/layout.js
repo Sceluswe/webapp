@@ -9,7 +9,7 @@ module.exports = {
                 m("div.container", [
                     m("ul", [
                         m("li", [
-                            m("img", {src: "../img/nobel-logo.png", width: "64px", height: "64px"})
+                            m("img.logo")
                         ]),
                         m("li.home", [
                             m("a", { href: "/", oncreate: m.route.link }, "Home")

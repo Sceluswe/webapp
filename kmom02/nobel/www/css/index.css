@@ -4,19 +4,14 @@ hmtl, body {
     font-family: arial;
 }
 
-h1, h2, h3, h4, h5, h6, p, img {
-    margin-top: 0;
-    margin-left: 24px;
-    margin-right: 24px;
-}
-
 h1 {
+    margin: 0 24px 24px 24px;
     font-size: 1.65em;
 }
 
 h2 {
     font-size: 1.5em;
-    margin-bottom: 12px;
+    margin: 0 24px 12px 24px;
     color:	#D5AD6D; /*if no support for background-clip*/
 
     /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
@@ -56,12 +51,30 @@ h2 {
 
 h3 {
     font-size: 1em;
-    margin-bottom: 0;
+    margin: 0 24px 0 24px;
 }
 
 h4 {
     color: #292517;
+    margin: 0 24px 0 24px;
 }
+
+h5, h6, p, img {
+    margin-top: 0;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+/* ----------------------------------------
+* -------- Logo
+*/
+.logo {
+    background-image: url(../img/nobel-logox16.png);
+    width: 64px;
+    height: 64px;
+}
+
+
 
 /* ----------------------------------------
 * -------- Navbar
@@ -97,14 +110,6 @@ navbar li a {
     text-decoration: none;
 }
 
-navbar li h1 {
-    display: inline;
-    margin-left: 3px;
-    margin-right: 0;
-    padding: 0;
-    border-bottom: 0;
-}
-
 navbar li img {
     display: inline;
     padding: 0;
@@ -115,6 +120,11 @@ navbar li img {
     border-radius: 50%;
 }
 
+
+
+/* ----------------------------------------
+* -------- Year menu.
+*/
 .nobelyears {
     list-style-type: none;
     background-color: #142147;
@@ -176,18 +186,9 @@ navbar li img {
 
 
 
-
 /* ----------------------------------------
 * -------- Classes
 */
-/*.title {
-    text-align: center;
-}
-
-.main {
-    text-align: center;
-}*/
-
 .bold {
     font-weight: bold;
 }
@@ -202,14 +203,6 @@ navbar li img {
     margin-left: 24px;
     margin-right: 24px;
     background-image: url(../img/profile.jpg);
-}
-
-.logo {
-    width: 170px;
-    height: 200px;
-    margin-left: 24px;
-    margin-right: 24px;
-    background-image: url(../img/logo.png);
 }
 
 .lastp {

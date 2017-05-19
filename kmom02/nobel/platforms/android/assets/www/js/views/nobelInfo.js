@@ -6,27 +6,14 @@ var Nobel = require("../model/nobel");
 
 module.exports = {
     oninit: function (vnode) {
-        console.log("Year we're trying to get the info of: " + vnode.attrs.year);
         Nobel.load(vnode.attrs.year);
     },
 
     view: function () {
-        var thename = "";
-        var themotivation = "";
-        var thecategory = "";
-
-        // The object solution.
-        Nobel.current.categories.forEach(function (category) {
-            thecategory = category.name;
-            thename = category.winnerNames[0];
-            themotivation = category.winnerMotivations[0];
-        });
-
-        console.log(thename);
-        console.log(themotivation);
-
         // The array with all HTML elements.
         var arr_vnodes = [];
+
+        console.log(Nobel.current.categories);
 
         // The object solution.
         Nobel.current.categories.forEach(function (category) {

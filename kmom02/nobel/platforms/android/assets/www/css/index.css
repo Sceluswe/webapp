@@ -1,10 +1,11 @@
 hmtl, body {
     margin: 0;
     padding: 0;
+    font-family: arial;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, img {
-    font-family: arial;
+h1, h2, h3, h4, h5, h6, p, img {
+    margin-top: 0;
     margin-left: 24px;
     margin-right: 24px;
 }
@@ -15,35 +16,85 @@ h1 {
 
 h2 {
     font-size: 1.5em;
+    margin-bottom: 12px;
+    color:	#D5AD6D; /*if no support for background-clip*/
+
+    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top,
+    rgba(213,173,109,1) 0%,
+    rgba(213,173,109,1) 26%,
+    rgba(226,186,120,1) 35%,
+    rgba(163,126,67,1) 45%,
+    rgba(145,112,59,1) 61%,
+    rgba(213,173,109,1) 100%);
+
+    /* For Firefox (3.6 to 15) */
+    background: -moz-linear-gradient(transparent, transparent),
+    -moz-linear-gradient(top,
+    rgba(213,173,109,1) 0%,
+    rgba(213,173,109,1) 26%,
+    rgba(226,186,120,1) 35%,
+    rgba(163,126,67,1) 45%,
+    rgba(145,112,59,1) 61%,
+    rgba(213,173,109,1) 100%);
+
+     /* For old Opera (11.1 to 12.0) */
+     background: -o-linear-gradient(transparent, transparent),
+     -o-linear-gradient(top,
+     rgba(213,173,109,1) 0%,
+     rgba(213,173,109,1) 26%,
+     rgba(226,186,120,1) 35%,
+     rgba(163,126,67,1) 45%,
+     rgba(145,112,59,1) 61%,
+     rgba(213,173,109,1) 100%);
+
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 h3 {
     font-size: 1em;
+    margin-bottom: 0;
 }
 
 h4 {
     color: #292517;
 }
 
+.logo {
+    background-image: url(../img/nobel-logo.png);
+    width: 64px;
+    height: 64px;
+}
+
 /* ----------------------------------------
 * -------- Navbar
 */
+.home {
+    margin-top: 56px;
+    margin-left: 80px;
+    font-size: 1.25em;
+
+}
+
+.home a {
+    color: #2b3759;
+}
+
 navbar ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
+    margin-bottom: 24px;
     padding: 6px;
-    background-color: #21997D;
-    border-bottom: 3px solid #C42A00;
+    background-image: url(../img/nobel-background.png);
+    border-bottom: 1px solid #2b3759;
 }
 
 navbar li {
     display: inline;
     padding-bottom: 3px;
-    /*border-bottom: 3px solid #83c44a;*/
-}
-
-navbar li:hover {
-    border-bottom:  3px solid #292517;
 }
 
 navbar li a {
@@ -52,10 +103,83 @@ navbar li a {
     text-decoration: none;
 }
 
-navbar li h2 {
-    margin: 0;
+navbar li h1 {
+    display: inline;
+    margin-left: 3px;
+    margin-right: 0;
     padding: 0;
+    border-bottom: 0;
 }
+
+navbar li img {
+    display: inline;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 0;
+    border: 1px solid #D5AD6D;
+    border-radius: 50%;
+}
+
+.nobelyears {
+    list-style-type: none;
+    background-color: #142147;
+}
+
+.nobelyears li {
+    margin-right: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: #142147;
+    border: 2px solid #D5AD6D;
+    float: left;
+}
+
+.nobelyears li:hover {
+    background-color: #2b3759;
+}
+
+.nobelyears li a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+
+    color:	#D5AD6D; /*if no support for background-clip*/
+
+    /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+    background: -webkit-linear-gradient(transparent, transparent),
+    -webkit-linear-gradient(top,
+    rgba(213,173,109,1) 0%,
+    rgba(213,173,109,1) 26%,
+    rgba(226,186,120,1) 35%,
+    rgba(163,126,67,1) 45%,
+    rgba(145,112,59,1) 61%,
+    rgba(213,173,109,1) 100%);
+
+    /* For Firefox (3.6 to 15) */
+    background: -moz-linear-gradient(transparent, transparent),
+    -moz-linear-gradient(top,
+    rgba(213,173,109,1) 0%,
+    rgba(213,173,109,1) 26%,
+    rgba(226,186,120,1) 35%,
+    rgba(163,126,67,1) 45%,
+    rgba(145,112,59,1) 61%,
+    rgba(213,173,109,1) 100%);
+
+     /* For old Opera (11.1 to 12.0) */
+     background: -o-linear-gradient(transparent, transparent),
+     -o-linear-gradient(top,
+     rgba(213,173,109,1) 0%,
+     rgba(213,173,109,1) 26%,
+     rgba(226,186,120,1) 35%,
+     rgba(163,126,67,1) 45%,
+     rgba(145,112,59,1) 61%,
+     rgba(213,173,109,1) 100%);
+
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 
 
