@@ -12,8 +12,8 @@ module.exports = {
         var htmlNodes = [];
 
         for (var i = 0; i < length; i++) {
-            htmlNodes.push(m("p", {class: "bold"}, Git.getName(i)));
-            htmlNodes.push(m("p", {class: "endparagraf"}, Git.getLastUpdate(i)));
+            htmlNodes.push(m("p", { class: "bold" }, Git.getName(i)));
+            htmlNodes.push(m("p", { class: "endparagraf" }, Git.getLastUpdate(i)));
         }
 
         return htmlNodes;

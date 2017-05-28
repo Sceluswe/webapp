@@ -18,7 +18,6 @@ var app = {
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
         //this.onDeviceReady();
-        m.redraw();
     },
 
     onDeviceReady: function() {
@@ -27,13 +26,21 @@ var app = {
 
         m.route(document.body, "/", {
             //"/": Me
-            "/": {render: function () {return m(Layout , m(Me));}},
-            "/about" : {render: function () {return m(Layout , m(About));}},
-            "/report" : {render: function () {return m(Layout , m(Report));}},
-            "/github" : {render: function () {return m(Layout , m(Github));}},
-            "/orientation" : {render: function () {
-                return m(Layout , m(Orientation));
-            }},
+            "/": { render: function () {
+                return m(Layout, m(Me));
+            } },
+            "/about" : { render: function () {
+                return m(Layout, m(About));
+            } },
+            "/report" : { render: function () {
+                return m(Layout, m(Report));
+            } },
+            "/github" :  { render: function () {
+                return m(Layout, m(Github));
+            } },
+            "/orientation" : { render: function () {
+                return m(Layout, m(Orientation));
+            } },
         });
     },
 };

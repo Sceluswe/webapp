@@ -4,12 +4,6 @@ hmtl, body {
     font-family: arial;
 }
 
-h5, h6, p, img {
-    margin-top: 0;
-    margin-left: 24px;
-    margin-right: 24px;
-}
-
 h1 {
     margin: 0 24px 24px 24px;
     font-size: 1.65em;
@@ -65,15 +59,23 @@ h4 {
     margin: 0 24px 0 24px;
 }
 
-
+h5, h6, p, img {
+    margin-top: 0;
+    margin-left: 24px;
+    margin-right: 24px;
+}
 
 /* ----------------------------------------
 * -------- Logo
 */
 .logo {
-    background-image: url(../img/nobel-logox16.png);
     width: 64px;
     height: 64px;
+    background-image: url("../img/nobel-logox16.png");
+    padding: 0;
+    border-bottom: 0;
+    border: 1px solid #D5AD6D;
+    border-radius: 50%;
 }
 
 
@@ -90,11 +92,6 @@ h4 {
 
 .home a {
     color: #2b3759;
-}
-
-.home a:active {
-    color: #2b3759;
-    background-color: black;
 }
 
 navbar ul {
@@ -115,16 +112,6 @@ navbar li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-}
-
-navbar li img {
-    display: inline;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    border-bottom: 0;
-    border: 1px solid #D5AD6D;
-    border-radius: 50%;
 }
 
 
@@ -211,7 +198,6 @@ navbar li img {
     margin-right: 24px;
     background-image: url(../img/profile.jpg);
 }
-
 
 .lastp {
     margin-bottom: 48px;

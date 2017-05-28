@@ -69,9 +69,13 @@ h5, h6, p, img {
 * -------- Logo
 */
 .logo {
-    background-image: url(../img/nobel-logox16.png);
     width: 64px;
     height: 64px;
+    background-image: url("../img/nobel-logox16.png");
+    padding: 0;
+    border-bottom: 0;
+    border: 1px solid #D5AD6D;
+    border-radius: 50%;
 }
 
 
@@ -108,16 +112,6 @@ navbar li a {
     color: white;
     font-weight: bold;
     text-decoration: none;
-}
-
-navbar li img {
-    display: inline;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 0;
-    border-bottom: 0;
-    border: 1px solid #D5AD6D;
-    border-radius: 50%;
 }
 
 
